@@ -5,9 +5,20 @@ $("#selh3").click(function (event) {
 $("li a").click(function (event) {
     event.preventDefault();
     if ($(this).data('seleccion') != null) {
-        $("#contenedor").load('selecciones/' + $(this).data('selecciones') + '.html');
+        $("#contenedor").load('selecciones/' + $(this).data('seleccion') + '.html');
     }
 });
+
+$("#contacto").click(function (event) {
+    $("#contenedor").load('contacto.html');
+});
+
+$("#partidos").click(function (event) {
+    $("#contenedor").load('partidos.html');
+});
+
+
+
 
 var part = "";
 $.getJSON('partidos.json', function (datos) {
